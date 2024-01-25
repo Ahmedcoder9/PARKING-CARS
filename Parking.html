@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="parkingIndex.css">
+  <title>parking cars</title>
+  <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container is-desktop" style="max-width: 100%;">
+    <nav class="navbar" role="navigation" aria-label="main navigation" navbar=" is-fixed-top">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="Parking.html">
+          <h2>Parking</h2>
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu"  aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu" id="navMenu"></div>
+      </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a href="Appoint.html" class="navbar-item">
+                Appointment
+              </a>
+              <a href="LogIn.html" class="navbar-item">LOG IN</a>
+              <div class="buttons">
+              <a href="SignIn.html" class="button is-warning">Sign Up</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </nav>
+<div class="title">
+  <p style="
+  font-size: 70px;
+  font-weight: bolder;">
+  Parking
+</p>
+</div>
+    <div id="banner">
+      <img class="banner-img" src="cc.jpg">
+      <div class="arrow">
+        <i class="fa-solid fa-arrow-left arrow_left "></i>
+        <i class="fa-solid fa-arrow-right arrow_right "></i>
+      </div>
+      <div class="dots"></div>
+    </div>
+  </div>
+  
+  <div class="h1">Information</div>
+  <div class="wrapper">
+    <form>
+        <div class="input-box">
+            <select name="type" class="inputt">
+              <option value="Damascus">Damascus</option>
+              <option value="">Aleppo</option>
+              <option value="">Homs</option>
+            </select>
+            <i class='bx bxs-user'></i>
+        </div>
+        <div class="input-box">
+            <input type="text" placeholder="Name Country" required>
+            <i class='bx bxs-lock-alt'></i>
+        </div>
+        <div class="input-box">
+          <input type="text" placeholder="Name Parking" required>
+          <i class='bx bxs-lock-alt'></i>
+          <div class="input"><br>
+          <label style="color: #fcf9f9;font-weight: 500;font-size: 16px">count time booking:</label>
+         <button style="margin-right: 10px;
+         margin-left: 10px;
+          width: 30px;
+          border: inherit;
+          background-color: #fffffe;
+          " id="subtract">-
+         </button>
+          <span id="output">01</span>
+        <button id="add" style="margin-left: 10px;
+          width: 30px;
+          border: inherit;
+          background-color: #fffffe;">+
+        </button>
+      </div>
+
+      <div class="inputs">
+        <label class="label-title" >count time booking:</label>
+        <button class= "minus">-</button>
+        <span class="num">01</span>
+      <button class="plus">+</button>
+      </div>
+      <button type="submit" class="btn">
+        <a href="Appoint.html">DONE</a>
+      </button>
+        </div>
+    </form>
+</div>
+
+  <footer class="footer">
+    <div class="container row">
+      <div class="footer-col">
+        <h4>company</h4>
+        <ul>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">our services</a></li>
+          <li><a href="#">privacy policy</a></li>
+          <li><a href="#">visit website</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">shipping</a></li>
+          <li><a href="#">returns</a></li>
+          <li><a href="#">payment options</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <div class="logo" style="margin: 20px;"><img src="aa.jpg" alt="" width="40%"></div>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+
+</html>
+
+<script>
+
+  // script increment 1
+  let add = document.querySelector("#add");
+  let subract=document.querySelector("#subtract");
+  let result=1;
+add.addEventListener("click", function () {
+  let output = document.querySelector("#output");
+  let result = Number(output.innerText) + 1;
+  if (result > 9999) {
+    result ++;
+  }
+  output.innerText = result;
+});
+subract.addEventListener("click", function () {
+  let output = document.querySelector("#output");
+  let result = Number(output.innerText) - 1;
+
+  if (result < 1) {
+    result = 1;
+  }
+  output.innerText = result;
+});
+  //end script increment 1
+   // script increment 2
+   const plus =document.querySelector(".plus")
+   const minus =document.querySelector(".minus")
+   const num =document.querySelector(".num");
+
+   let a=1;
+   plus.addEventListener("click",()=>{
+    a++;
+    a=( a < 10 ) ? "0" +a:a;
+    num.innerHTML=a;
+    console.log("a");
+   });
+
+   minus.addEventListener("click",()=>{
+    if(a>1){
+      a--;
+      a=( a < 10 ) ? "0" +a : a;
+    num.innerHTML=a;
+    }
+    
+   });
+    //end script increment 2
+
+  document.addEventListener('DOMContentLoaded', () => {
+
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach(el => {
+      el.addEventListener('click', () => {
+
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+
+  });
+  /*=============== TABLEAU D'IMAGES ===============*/
+  const slides = [
+    {
+      imageUrl: "dd.jpg",
+    },
+    {
+      imageUrl: "aa.jpg",
+
+    },
+    {
+      imageUrl: "cc.jpg",
+    },
+    {
+      imageUrl: "bb.jpg",
+    },
+  ];
+
+  /*=============== VARIABLES ===============*/
+  //#region
+
+  /* Sélectionne l'élément du DOM avec la classe "dots" et le stocke dans la variable dotsContainer */
+  const dotsContainer = document.querySelector(".dots");
+
+  /* Sélectionne les éléments du DOM avec les classes "arrow_right" et "arrow_left" 
+  et les stocke dans les variables arrowRight et arrowLeft */
+  const arrowRight = document.querySelector(".arrow_right");
+  const arrowLeft = document.querySelector(".arrow_left");
+
+  /* Sélectionne les éléments du DOM ayant les classes 
+  "banner-img" et "#banner p" et les stocke dans les variables img et tagLine */
+  const img = document.querySelector(".banner-img");
+  const tagLine = document.querySelector("#banner p");
+
+  /* Initialise l'index à 0, représentant la position actuelle dans le carrousel. */
+  let index = 0;
+
+  //#endregion
+
+  /*=============== BULLET POINTS ===============*/
+  /* Fonction pour créer un bullet point dans le carrousel */
+  function createDot(i) {
+
+    /* Crée un élément div dans le DOM et lui ajoute la classe "dot" */
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+
+    /* Ajoute le bullet point au conteneur de points (dotsContainer) */
+    dotsContainer.appendChild(dot);
+
+    /* Ajoute un Event Listener au clic sur le bullet point, 
+    appelant la fonction updateCarousel avec l'index du bullet point en argument */
+    dot.addEventListener("click", () => {
+      updateCarousel(i);
+    });
+
+    /* CONDITION : si le bullet point créé correspond à l'index actuel du carrousel, 
+    ajoute la classe "dot_selected" afin qui soit en surbrillance. */
+    if (i === index) {
+      dot.classList.add("dot_selected");
+    }
+  }
+
+  /* Fonction permettant d'afficher les bullet points du carrousel */
+  function displayDots() {
+
+    /* Parcours tous les slides et crée un bullet point pour chaque image */
+    for (let i = 0; i < slides.length; i++) {
+      createDot(i);
+    }
+  }
+
+  /*=============== CARROUSEL ===============*/
+  /* Fonction permettant de mettre à jour le carrousel avec l'image 
+  et le texte correspondant à un index donné */
+  function updateCarousel(i) {
+
+    /* Sélectionne tous les bullet points du carrousel */
+    const selectDots = document.querySelectorAll(".dots .dot");
+
+    /* Retire la classe "dot_selected" du point actuel */
+    selectDots[index].classList.remove("dot_selected");
+
+    /* Mise à jour de l'index actuel */
+    index = i;
+
+    /* Met à jour l'image et le texte du carrousel en fonction du nouvel index */
+    img.src = slides[index].imageUrl;
+    tagLine.innerHTML = slides[index].tagLine;
+
+    /* Ajoute la classe "dot_selected" au nouveau bullet point */
+    selectDots[index].classList.add("dot_selected");
+  }
+
+  /* Fonction permettant d'effectuer le défilement du carrousel vers la droite 
+  ou la gauche dans la direction choisi */
+  function slide(direction) {
+
+    /* Sélectionne tous les points du carrousel */
+    const selectDots = document.querySelectorAll(".dots .dot");
+
+    /* Retire la classe "dot_selected" du bullet point actuel */
+    selectDots[index].classList.remove("dot_selected");
+
+    /*  Met à jour l'index en fonction de la direction */
+    if (direction === "right") {
+      index = (index + 1) % slides.length;
+    } else {
+      index = (index - 1 + slides.length) % slides.length;
+    }
+
+    /* Met à jour l'image et le texte du carrousel en fonction du nouvel index. */
+    img.src = slides[index].imageUrl;
+    tagLine.innerHTML = slides[index].tagLine;
+
+    /* Ajoute la classe "dot_selected" au nouveau bullet point */
+    selectDots[index].classList.add("dot_selected");
+  }
+
+  /*=============== INTERACTION AVEC LES FLÈCHES & AUTOMATISATION ===============*/
+  function slideRight() {
+    slide("right");
+  }
+
+  function slideLeft() {
+    slide("left");
+  }
+
+  /* Fonction permettant le défilement automatique du carrousel */
+  function autoSlide() {
+    autoSlideInterval = setInterval(() => {
+      /* setInterval permet d'appeler la fonction slideRight toutes les X millisecondes */
+      slideRight();
+    }, 3000);  /* 3000 millisecondes = 3 secondes */
+  }
+
+  /* Ajout des Event Listeners aux flèches pour un défilement manuel */
+  arrowRight.addEventListener("click", slideRight);
+  arrowLeft.addEventListener("click", slideLeft);
+
+  /* Ajoute un Event Listener pour arrêter le défilement automatique 
+  lorsqu'une interaction utilisateur est détectée */
+  dotsContainer.addEventListener("click", () => {
+    clearInterval(autoSlideInterval);
+    autoSlide();
+  });
+
+  /* Fonction utilisée pour précharger les images du carrousel. */
+  function preloadImages() {
+    for (let i = 0; i < slides.length; i++) {
+      const imageObj = new Image();
+      imageObj.src = slides[i].imageUrl;
+    }
+  }
+
+  /*=============== APPEL DE FONCTIONS ===============*/
+  /* Démarrage du préchargement d'images */
+  preloadImages();
+
+  /* Démarrage du défilement automatique */
+  autoSlide();
+
+  /* Affichage des bullet points du carrousel */
+  displayDots();
+
+</script>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js">
+
+</script>

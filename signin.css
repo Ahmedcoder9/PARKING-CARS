@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+html{
+    background-color: #1a1a1a;
+}
+body{
+    min-height: 100vh;
+    background:url(https://img.playbook.com/GkXdxuPUJybZqdTcLNt124xUnMD_bK19dxy4Z8SczhE/Z3M6Ly9wbGF5Ym9v/ay1hc3NldHMtcHVi/bGljLzJhNWYxODk1/LTE0ZWMtNGNjMi1h/ZGZlLTRkMzQxYWYw/Zjk1OQ);
+    background-size: cover;
+    background-position: center;
+}
+body{
+    min-height: 100vh;
+    background-image: url("parking_slot.svg");
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    background-color: #1a1a1a;
+    position: sticky;
+    top: 0;
+}
+.navbar-item{
+    color: white;
+}
+.wrapper {
+    width: 90%;
+    backdrop-filter: blur(2px);
+    color: #fff;
+    padding: 30px 40px;
+    margin: 3% auto;
+}
+.wrapper h1{
+    font-family: cursive;
+    text-decoration: underline;
+    color: orange;
+    font-size: 56px;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 4px 2px orangered;
+}
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+.wrapper .btn{
+    margin-top: 20px ;
+    width: 40%;
+    height: 60px;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    background: orange;
+    box-shadow: 0 0 10px rgba(0 , 0 , 0 , .1);
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 600;
+    translate: 75%;
+}
+.wrapper .btn:hover{
+    background-color: #f36936;
+    transition: 0.4s;
+}
+.input-name{
+    display: flex;
+}
+
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+
+}
+input{
+    margin-top: 6px;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #000;
+    padding: 20px 45px 20px 20px;
+}
+.footer{
+    padding: 20px;
+}
+.footer-col .social-links a {
+	color: orange;
+    background-color: rgb(0 0 0);
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 10px 10px 0;
+    line-height: 40px;
+    transition: all 0.5s ease;
+}
+.social-links {
+    text-align: center;
+}
+.social-links a{
+    padding: 20px;
+}
+.footer-text{
+    color: black;
+    display: flex;
+    font-weight: 900;
+    justify-content: center;
+    align-items: center;
+}

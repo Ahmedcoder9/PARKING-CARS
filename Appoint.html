@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="Appoint.css">
+    <title>Make Appointment</title>
+    <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation" navbar=" is-fixed-top">
+        <div class="navbar-brand" >
+          <a class="navbar-item" href="Parking.html">
+            <h2>Parking</h2>
+          </a>
+          <a role="button" class="navbar-burger" aria-label="menu"  aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+          <div class="navbar-menu" id="navMenu"></div>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a href="Appoint.html" class="navbar-item">
+                  Appointment
+                </a>
+                <a href="LogIn.html" class="navbar-item">LOG IN</a>
+                <div class="buttons">
+                <a href="SignIn.html" class="button is-warning">Sign Up</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="h2">Choose The parking</div>
+      <div class="container">
+        <div class="card">
+            <div class="image">
+                <img src="https://www.teflcourse.net/uploads/pakistan-featured-image.jpg" alt="">
+            </div>
+            <div class="content">
+                <h2 id="valueToSave1">Pakistan Monument</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, veritatis illum! Iure nostrum ut suscipit cupiditate, ea iusto nulla at.</p>
+                <span class="subtitle">..Open Now..</span><br>
+                <h6>from <span class="hour">5AM</span> to <span class="hour">10PM</span></h6>
+                    <button onclick="saveValue(1)" >Booking Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="https://www.teflcourse.net/uploads/pakistan-featured-image.jpg" alt="">
+            </div>
+            <div class="content">
+                <h2 id="valueToSave2">Pakistan Monument</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, veritatis illum! Iure nostrum ut suscipit cupiditate, ea iusto nulla at.</p>
+                <span class="subtitle">..Open Now..</span><br>
+                <h6>from <span class="hour">5AM</span> to <span class="hour">10PM</span></h6>
+                    <button onclick="saveValue(2)" >Booking Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="https://www.teflcourse.net/uploads/pakistan-featured-image.jpg" alt="">
+            </div>
+            <div class="content">
+                <h2 id="valueToSave3">Pakistan Monument</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, veritatis illum! Iure nostrum ut suscipit cupiditate, ea iusto nulla at.</p>
+                <span class="subtitle">..Open Now..</span><br>
+                <h6>from <span class="hour">5AM</span> to <span class="hour">10PM</span></h6>
+                    <button onclick="saveValue(3)" >Booking Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="https://www.teflcourse.net/uploads/pakistan-featured-image.jpg" alt="">
+            </div>
+            <div class="content">
+                <h2 id="valueToSave4">sss Monument</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, veritatis illum! Iure nostrum ut suscipit cupiditate, ea iusto nulla at.</p>
+                <span class="subtitle">..Open Now..</span><br>
+                <h6>from <span class="hour">5AM</span> to <span class="hour">10PM</span></h6>
+                    <button onclick="saveValue(4)" >Booking Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="https://www.teflcourse.net/uploads/pakistan-featured-image.jpg" alt="">
+            </div>
+            <div class="content">
+                <h2 id="valueToSave5"> Monument</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, veritatis illum! Iure nostrum ut suscipit cupiditate, ea iusto nulla at.</p>
+                <span class="subtitle">..Open Now..</span><br>
+                <h6>from <span class="hour">5AM</span> to <span class="hour">10PM</span></h6>
+                    <button onclick="saveValue(5)" >Booking Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="https://www.teflcourse.net/uploads/pakistan-featured-image.jpg" alt="">
+            </div>
+            <div class="content">
+                <h2 id="valueToSave6">Parcking Monument</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, veritatis illum! Iure nostrum ut suscipit cupiditate, ea iusto nulla at.</p>
+                <span class="subtitle">..Open Now..</span><br>
+                <h6>from <span class="hour">5AM</span> to 
+                    <span class="hour">10PM</span></h6>
+                    <button onclick="saveValue(6)" >Booking Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="section-finish">
+       
+        <form>
+            <labe>Enter Num Cars:</labe>
+            <input type="text" placeholder="Num Car" ><br><br>
+            <label>Name Parking:</label>
+            <span id="displayedValue"></span>  
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+// Get all "navbar-burger" elements
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+// Add a click event on each of them
+$navbarBurgers.forEach(el => {
+  el.addEventListener('click', () => {
+
+    // Get the target from the "data-target" attribute
+    const target = el.dataset.target;
+    const $target = document.getElementById(target);
+
+    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+    el.classList.toggle('is-active');
+    $target.classList.toggle('is-active');
+
+  });
+});
+
+});
+var h2Element;
+var spanElement;
+var savedValue;
+function saveValue(index)
+    {
+        h2Element =document.getElementById("valueToSave" + index );
+
+        if(!spanElement)
+       {
+        spanElement =document.getElementById("displayedValue")
+       }
+    var valueToSave =h2Element.innerText;
+    savedValue = "."  + valueToSave;
+    spanElement.innerText = savedValue;
+    }
+
+</script>

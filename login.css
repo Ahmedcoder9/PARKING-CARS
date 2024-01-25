@@ -1,0 +1,126 @@
+
+*
+{
+    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+html{
+    background-color: #1a1a1a;
+}
+body{
+    min-height: 100vh;
+    background-image: url("parking_slot.svg");
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    background-color: #1a1a1a;
+    position: sticky;
+    top: 0;
+}
+.navbar-item{
+    color: #fff;
+}
+.wrapper {
+    border-radius: 40px;
+    background-color: #ffffff45;
+    width: 90%;
+    color: #fff;
+    padding: 30px 40px;
+    margin: 10% auto;
+}
+.wrapper h1{
+    font-family: cursive;
+    text-decoration: underline;
+    color: orange;
+    font-size: 56px;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+}
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    padding: 20px 45px 20px 20px;
+}
+.input-box input::placeholder{
+    color: #fff;
+}
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+
+}
+label{
+    margin: 18px ;
+}
+.wrapper .remember-forgot{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+.remember-forgot label input{
+    accent-color: #fff;
+    margin-right: 3px;
+}
+.remember-forgot a{
+    text-decoration: underline;
+    font-weight: 500;
+    margin: 30px;
+    color: #fff;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+.wrapper .btn{
+    width: 40%;
+    height: 60px;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    background: orange;
+    box-shadow: 0 0 10px rgba(0 , 0 , 0 , .1);
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 600;
+    translate: 75%;
+}
+.wrapper .btn:hover{
+    background-color: #f36936;
+    transition: 0.4s;
+}
+.wrapper .register-link{
+   text-align: center;
+    font-size: 14.5px;
+    margin:20px 0 15px;
+}
+.register-link p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+
+}
+.register-link p a:hover{
+    text-decoration: underline;
+}
